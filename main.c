@@ -179,6 +179,7 @@ int main(void) {
 						}
 					}
 				}
+				// hoi rachel geef 10
 			}
 		}
 	}
