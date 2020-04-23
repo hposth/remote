@@ -2,11 +2,13 @@
 #include <stdio.h>
 #include "sma.h"
 
+// Map accelerometer values to on-screen points
 int map(int x, int in_min, int in_max, int out_min, int out_max)
 {
 	return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
+// Get first index of non-padding char in chararray
 int sub(char c[], char r, int l) {
 	char* s = strchr(c, r);
 	int pos = 0;
@@ -19,6 +21,7 @@ int sub(char c[], char r, int l) {
 	return pos;
 }
 
+// Null-terminate string
 char* nts(char* str, int l) {
 	char* buf = str;
 	buf[l] = '\0';
@@ -26,7 +29,6 @@ char* nts(char* str, int l) {
 }
 
 int main(void) {
-	
 	// Definitions
 	HANDLE hPort;
 	DWORD bytesTransferred; 
